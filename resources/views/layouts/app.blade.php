@@ -1,6 +1,7 @@
 @php
 use App\ProfileMarket;
     $profile = ProfileMarket::find(1);
+    // dd($profile);
 @endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -18,7 +19,7 @@ use App\ProfileMarket;
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="icon" href="{{ !empty($profile->favicon) ?  Route('favicon', ['filename' => $profile->favicon]) : URL::asset('photo/box2.svg') }}" type="image/x-icon"/>
+    <link rel="icon" href="{{ asset('logoteknisi.jpeg') }}" type="image/x-icon"/>
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -32,8 +33,8 @@ use App\ProfileMarket;
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <div class="d-flex">
-                        <div><img src="{{ !empty($profile->logo) ?  Route('logo', ['filename' => $profile->logo]) : asset('photo/box.svg') }}" style="height:50px;" alt=""></div>
-                        <div class="pl-3 ml-3 pt-2" style="border-left:1px solid rgba(0, 0, 0, 0.5); font-size:1.5rem;">{{ !empty($profile->title) ?  $profile->title :  'MarketPlace' }}</div>
+                        <div><img src="{{ asset('photo/logoteknisi.jpeg') }}" style="height:50px;" alt=""></div>
+                        <div class="pl-3 ml-3 pt-2" style="border-left:1px solid white; font-size:1.5rem;">{{ !empty($profile->title) ?  $profile->title :  'MarketPlace' }}</div>
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -106,43 +107,13 @@ use App\ProfileMarket;
         <div class='container-fluid footer'>
             <div class='container p-0 pt-3'>
                 <div class='row'>
-                    <div class='col-md-4 col-sm-12 pt-3'>
-                        <h3>Kontak Kami</h3>
-                        <p>{{ !empty($profile->address) ?  $profile->address :  'MarketPlace' }} <br> {{ !empty($profile->kota) ?  $profile->kota :  '' }} <br> {{ !empty($profile->telpon) ?  $profile->telpon :  '' }} <br> {{ !empty($profile->email) ?  $profile->email :  '' }}</p>
-                    </div>
-                    <div class='col-md-4 col-sm-12 pt-3'>
-                        <h3>Follow Us On</h3>
-                        <ul>
-                            <li><a href='{{  !empty($profile->social1) ?  $profile->social1 :  'https://facebook.com/' }}' target='_blank'>
-                                <i class="fa fa-facebook"></i></a></li>
-                            <li><a href='{{  !empty($profile->social1) ?  $profile->social1 :  'https://facebook.com/' }}' target='_blank'>
-                                <i class="fa fa-instagram"></i></a>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <div class='col-md-4 col-sm-12 pt-3'>
-                        <h3>Newsletter</h3>
-                        <p>Sign up for our newsletter.</p>
-                        <div class='newsletter-form p-0'>
-                            <form action='{{ route('newsletter.add') }}' method='post' id='newsletter-validate-detail'>
-                                @csrf
-                                <input type='email' name='email' id='newsletter-footer' class=''
-                                    placeholder='Enter your email'>
-                                <button type='submit' id='signup-newsletter-footer' class='button'>SIGN UP</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class='col-12 divider-footer p-0'>
-                    </div>
+                   
+                 
                     <div class='col-md-6 col-sm-12 copyright'>
                         {{-- <p>Pro</p> --}}
                         <p>{{ !empty($profile->title) ?  $profile->title :  'Hasanarofid' }} &copy; <?= date('Y') ?>. All Rights Reserved</p>
                     </div>
-                    <div class='col-md-6 col-sm-12 payment'> <img src="{{ asset('photo/cards.png') }}" alt=''>
-                    </div>
-                    <div class='col-12 p-0 mt-3'>
-                    </div>
+                    
 
                 </div>
             </div>

@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="icon" href="{{ !empty($profile->favicon) ?  Route('favicon', ['filename' => $profile->favicon]) : URL::asset('photo/box2.svg') }}" type="image/x-icon"/>
+    <link rel="icon" href="{{ asset('logoteknisi.jpeg') }}" type="image/x-icon"/>
 
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -31,7 +31,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ route('admin.index') }}">
                     <div class="d-flex">
-                        <div><img src="{{ !empty($profile->logo) ?  Route('logo', ['filename' => $profile->logo]) : asset('photo/box.svg')  }}" style="height:50px;" alt=""></div>
+                        <div><img src="{{ asset('logoteknisi.jpeg') }}" style="height:50px;" alt=""></div>
                         <div class="pl-3 ml-3 pt-2" style="border-left:1px solid rgba(0, 0, 0, 0.5); font-size:1.5rem;">{{ !empty($profile->title) ?  $profile->title :  'MarketPlace' }}</div>
                     </div>
                 </a>

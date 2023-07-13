@@ -6,13 +6,7 @@ by : hasanarofid
 
 ### Features Role User
 
-HRD
 
-Teknisi
-
-Marketing
-
-Admin 
 
 ### Installation
 1. Clone the repository using the command "git clone [link]"
@@ -34,3 +28,18 @@ $php artisan storage:link
 * MySql- Databse
 
 ### Progress fitur 13/7/2023
+
+## login 5 role
+HRD (done)
+Teknisi (done)
+Marketing (done)
+Admin (done)
+User/Pelanggan (done)
+
+## menu berdasarkan login 5 role
+HRD 
+Teknisi 
+Marketing 
+Admin 
+User/Pelanggan 
+

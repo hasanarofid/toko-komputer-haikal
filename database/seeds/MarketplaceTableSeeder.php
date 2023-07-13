@@ -14,7 +14,7 @@ class MarketplaceTableSeeder extends Seeder
         DB::table('profilemarketpalces')->insert([
             [
                 'id'=>1,
-                'title'=>'Marketplace V1',
+                  'title'=>'Sistem Teknisi Komputer',
                 'diskripsi'=>'by Hasanarofid',
                 'address'=>'dukuh pakis,surabaya',
                 'zipcode'=>3055,
@@ -22,7 +22,9 @@ class MarketplaceTableSeeder extends Seeder
                 'telpon'=>'0813242424',
                 'social1'=>'facebok.com/hasanarofid',
                 'social2'=>'instagram.com/hasanarofid',
-                'kota'=>'Surabaya',
+                'social3'=>'theards.com/hasanarofid',
+                'social4'=>'twitter.com/hasanarofid',
+                'kota'=>'Surabaya'
 
             ],
           

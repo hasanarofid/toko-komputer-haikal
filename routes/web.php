@@ -12,9 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function(){
+    return redirect('/login');
+});
 
-Route::get('/', 'HomeController@index')->name('home.index');
-Route::post('/susbcribe', 'NewsletterController@add')->name('newsletter.add');
+// Route::get('/', 'HomeController@index')->name('home.index');
+// Route::get('/', 'HomeController@index')->name('home.index');
+Route::get('/', 'AdminController@index')->name('admin.index')->middleware(['auth']);
+// Route::post('/susbcribe', 'NewsletterController@add')->name('newsletter.add');
 
 Route::get('/dashboard', 'AdminController@index')->name('admin.index')->middleware(['auth','admin']);
 Route::patch('/dashboard', 'AdminController@updatereminder')->name('admin.reminder')->middleware(['auth','admin']);
