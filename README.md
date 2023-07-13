@@ -30,16 +30,16 @@ $php artisan storage:link
 ### Progress fitur 13/7/2023
 
 ## login 5 role
-HRD (done)
-Teknisi (done)
-Marketing (done)
-Admin (done)
-User/Pelanggan (done)
+* HRD (done)
+* Teknisi (done)
+* Marketing (done)
+* Admin (done)
+* User/Pelanggan (done)
 
 ## menu berdasarkan login 5 role
-HRD 
-Teknisi 
-Marketing 
-Admin 
-User/Pelanggan 
+* HRD 
+* Teknisi 
+* Marketing 
+* Admin 
+* User/Pelanggan 
 
