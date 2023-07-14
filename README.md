@@ -46,3 +46,6 @@ $php artisan storage:link
 ## Improve panel admin
 * demo
 ![demo](public/gambardemo/paneldashboard.png)
+![login](public/gambardemo/login.png)
+![daftar](public/gambardemo/daftar.png)
+
