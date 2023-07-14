@@ -43,3 +43,6 @@ $php artisan storage:link
 * Admin 
 * User/Pelanggan 
 
+## Improve panel admin
+* halaman
+

@@ -91,9 +91,43 @@
                                 <a href="{{ route('admin.index') }}" class="list-group-item admin-navigation">
                                     Dashboard
                                 </a>
-                                <a href="{{ route('admin.user') }}" class="list-group-item admin-navigation">
-                                        User
-                                </a>
+                                {{-- menu role admin --}}
+                                        @if (Auth::user()->role == 'Admin')
+                                            <a href="{{ route('admin.user') }}" class="list-group-item admin-navigation">
+                                                    Manajemen Pengguna
+                                            </a>
+
+                                            <a href="{{ route('admin.user') }}" class="list-group-item admin-navigation">
+                                                    Manajemen Pelanggan
+                                            </a>
+
+                                            <a href="{{ route('admin.user') }}" class="list-group-item admin-navigation">
+                                                    Manajemen Produk
+                                            </a>
+
+                                             <a href="{{ route('admin.user') }}" class="list-group-item admin-navigation">
+                                                    Penjualan
+                                            </a>
+
+                                             <a href="{{ route('admin.user') }}" class="list-group-item admin-navigation">
+                                                    Kelola Jasa Servis
+                                            </a>
+
+                                               <a href="{{ route('admin.user') }}" class="list-group-item admin-navigation">
+                                                    Laporan
+                                            </a>
+
+                                            <a href="{{ route('admin.user') }}" class="list-group-item admin-navigation">
+                                                    Pengaturan Sistem
+                                            </a>
+
+
+                                           
+
+
+
+                                        @endif
+                                {{-- end menu role admin --}}
                                 <a href="{{ route('admin.product') }}" class="list-group-item admin-navigation">
                                         Product
                                 </a>
