@@ -44,5 +44,5 @@ $php artisan storage:link
 * User/Pelanggan 
 
 ## Improve panel admin
-* halaman
-
+* demo
+![demo](public/gambardemo/paneldashboard.png)
