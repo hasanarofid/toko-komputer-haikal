@@ -36,6 +36,14 @@ $php artisan storage:link
 * Admin (done)
 * User/Pelanggan (done)
 
+### Progress fitur 14/7/2023
+## Improve panel admin
+* demo
+![demo](public/gambardemo/paneldashboard.png)
+![login](public/gambardemo/login.png)
+![daftar](public/gambardemo/daftar.png)
+
+### Progress fitur 15/7/2023
 ## menu berdasarkan login 5 role
 * HRD 
 * Teknisi 
@@ -43,9 +51,4 @@ $php artisan storage:link
 * Admin 
 * User/Pelanggan 
 
-## Improve panel admin
-* demo
-![demo](public/gambardemo/paneldashboard.png)
-![login](public/gambardemo/login.png)
-![daftar](public/gambardemo/daftar.png)
-
+## demo
