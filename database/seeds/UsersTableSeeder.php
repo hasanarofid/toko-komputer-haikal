@@ -15,36 +15,43 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'id'=>1,
+                'name'=>'Owner',
+                'email'=>'haikal@tokokomputer.com',
+                'password'=>Hash::make('haikal123'),
+                'role'=>'Owner'
+            ],
+            [
+                'id'=>2,
                 'name'=>'HRD',
-                'email'=>'hrd@teknisikomputer.com',
+                'email'=>'hrd@tokokomputer.com',
                 'password'=>Hash::make('hrd123'),
                 'role'=>'HRD'
             ],
             [
-                'id'=>2,
+                'id'=>3,
                 'name'=>'Teknisi',
-                'email'=>'teknisi@teknisikomputer.com',
+                'email'=>'teknisi@tokokomputer.com',
                 'password'=>Hash::make('teknisi123'),
                 'role'=>'Teknisi'
             ],
             [
-                'id'=>3,
+                'id'=>4,
                 'name'=>'Marketing',
-                'email'=>'marketing@teknisikomputer.com',
+                'email'=>'marketing@tokokomputer.com',
                 'password'=>Hash::make('marketing123'),
                 'role'=>'Marketing'
             ],
             [
-                'id'=>4,
+                'id'=>5,
                 'name'=>'User',
-                'email'=>'user@teknisikomputer.com',
+                'email'=>'user@tokokomputer.com',
                 'password'=>Hash::make('user123'),
                 'role'=>'User'
             ],
              [
-                'id'=>5,
+                'id'=>6,
                 'name'=>'Admin',
-                'email'=>'admin@teknisikomputer.com',
+                'email'=>'admin@tokokomputer.com',
                 'password'=>Hash::make('admin123'),
                 'role'=>'Admin'
             ],

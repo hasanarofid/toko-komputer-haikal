@@ -147,35 +147,47 @@ class ProductController extends Controller
 
     public function edit(Request $request,$id)
     {
-        $this->validate(request(),[
-            'image'=>'',
-            'name'=>'required|string',
-            'brand'=>'required|in:Nike,Adidas,New Balance,Asics,Puma,Skechers,Fila,Bata,Burberry,Converse',
-            'price'=>'required|integer',
-            'gender'=>'required|in:Male,Female,Unisex',
-            'category'=>'required|in:Shoes',
-        ]);
-        if(request('image'))
+        
+        // dd($request->brand);die;
+        // dd(request('image'));die;
+        // $this->validate(request(),[
+        //     'image'=>'',
+        //     'name'=>'required|string',
+        //     'brand'=>'required|in:Nike,Adidas,New Balance,Asics,Puma,Skechers,Fila,Bata,Burberry,Converse',
+        //     'price'=>'required|integer',
+        //     'gender'=>'required|in:Male,Female,Unisex',
+        //     'category'=>'required|in:Shoes',
+        // ]);
+       
+        if($request->image)
         {
+
             $imagepath = $request->image->store('products','public');
+            // dd($request->brand);die;
             $product = Product::findOrFail($id);
             
-            $product->name=request('name');
-            $product->brand=request('brand');
-            $product->price=request('price');
-            $product->gender=request('gender');
-            $product->category=request('category');
+            $product->name=$request->name;
+            $product->brand=$request->brand;
+            $product->price = $request->price;
+            $product->gender=$request->gender;
+            $product->category=$request->category;
             $product->image=$imagepath;
+           
             $product->save();
         }
         else
         {
+            // $imagepath = $request->image->store('products','public');
+            // dd($request->brand);die;
             $product = Product::findOrFail($id);
-            $product->name=request('name');
-            $product->brand=request('brand');
-            $product->price=request('price');
-            $product->gender=request('gender');
-            $product->category=request('category');
+            
+            $product->name=$request->name;
+            $product->brand=$request->brand;
+            $product->price = $request->price;
+            $product->gender=$request->gender;
+            $product->category=$request->category;
+            // $product->image=$imagepath;
+           
             $product->save();
         }
         return redirect()->route('admin.product')->with('success','Successfully edited the product!');

@@ -12,14 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(){
-    return redirect('/login');
-});
+// Route::get('/', function(){
+//     return redirect('/login');
+// });
 
 // Route::get('/', 'HomeController@index')->name('home.index');
-// Route::get('/', 'HomeController@index')->name('home.index');
-Route::get('/', 'AdminController@index')->name('admin.index')->middleware(['auth']);
-// Route::post('/susbcribe', 'NewsletterController@add')->name('newsletter.add');
+Route::get('/', 'HomeController@index')->name('home.index');
+// Route::get('/', 'AdminController@index')->name('admin.index')->middleware(['auth']);
+Route::post('/susbcribe', 'NewsletterController@add')->name('newsletter.add');
 
 Route::get('/dashboard', 'AdminController@index')->name('admin.index')->middleware(['auth','admin']);
 Route::patch('/dashboard', 'AdminController@updatereminder')->name('admin.reminder')->middleware(['auth','admin']);
@@ -62,7 +62,11 @@ Route::patch('/admin-stock/edit/{id}', 'StockController@editstock')->name('admin
 Route::get('/admin-stock/add', 'StockController@addform')->name('admin.addstockform')->middleware(['auth','admin']);
 Route::post('/admin-stock/add', 'StockController@addstock')->name('admin.addstock')->middleware(['auth','admin']);
 
+Route::get('/servis','ServisController@index')->name('servis.index');
+Route::get('/servislist','ServisController@index')->name('servis.list');
+
 Route::get('/product','ProductController@index')->name('product.index');
+
 Route::get('/product/filter','ProductController@filter')->name('product.filter');
 
 Route::get('/product/{product}','ProductController@show')->name('product.show');

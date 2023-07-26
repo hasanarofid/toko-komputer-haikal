@@ -14,8 +14,8 @@ class MarketplaceTableSeeder extends Seeder
         DB::table('profilemarketpalces')->insert([
             [
                 'id'=>1,
-                  'title'=>'Sistem Teknisi Komputer',
-                'diskripsi'=>'by Hasanarofid',
+                  'title'=>'Toko Komputer Haikal',
+                'diskripsi'=>'Melayani Servis semua jenis komputer. selain itu kami juga menjual komputer bekas namun berkualitas ',
                 'address'=>'dukuh pakis,surabaya',
                 'zipcode'=>3055,
                 'email'=>'hasanarofid@gmail.com',

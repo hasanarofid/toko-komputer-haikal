@@ -1,7 +1,6 @@
 @php
 use App\ProfileMarket;
-    $profile = ProfileMarket::find(1);
-    // dd($profile);
+$profile = ProfileMarket::find(1);
 @endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">

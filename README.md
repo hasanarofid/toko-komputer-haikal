@@ -1,12 +1,10 @@
 # Sistem
-project Sistem Teknisi Komputer
+project Sistem Toko Komputer Haikal
 by : hasanarofid
 
-## Sistem Teknisi Komputer
+## Sistem Toko Komputer Haikal
 
 ### Features Role User
-
-
 
 ### Installation
 1. Clone the repository using the command "git clone [link]"
@@ -27,7 +25,7 @@ $php artisan storage:link
 * Laravel - PHP framework
 * MySql- Databse
 
-### Progress fitur 13/7/2023
+### Progress fitur 26/7/2023
 
 ## login 5 role
 * HRD (done)
@@ -36,19 +34,7 @@ $php artisan storage:link
 * Admin (done)
 * User/Pelanggan (done)
 
-### Progress fitur 14/7/2023
-## Improve panel admin
+## halaman depan
+
 * demo
-![demo](public/gambardemo/paneldashboard.png)
-![login](public/gambardemo/login.png)
-![daftar](public/gambardemo/daftar.png)
-
-### Progress fitur 15/7/2023
-## menu berdasarkan login 5 role
-* HRD 
-* Teknisi 
-* Marketing 
-* Admin 
-* User/Pelanggan 
-
-## demo
+![halamandepan](public/gambardemo/haikaltoko.jpeg)
